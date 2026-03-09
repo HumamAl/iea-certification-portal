@@ -13,6 +13,12 @@ import {
   User,
   ArrowRight,
   Github,
+  FolderOpen,
+  GraduationCap,
+  RefreshCw,
+  ClipboardCheck,
+  BookOpen,
+  BarChart3,
 } from "lucide-react";
 
 // ═══════════════════════════════════════════════════════════════════════════
@@ -23,9 +29,13 @@ import {
 // ═══════════════════════════════════════════════════════════════════════════
 
 const navItems = [
-  { href: "/", label: "Dashboard", icon: LayoutDashboard },
-  // Dashboard Builder agent: add 3-5 feature page nav items here.
-  // Example: { href: "/orders", label: "Orders", icon: ShoppingCart },
+  { href: "/", label: "Credential Registry", icon: LayoutDashboard },
+  { href: "/applications", label: "Applications", icon: FolderOpen },
+  { href: "/ce-tracking", label: "CE Tracking", icon: GraduationCap },
+  { href: "/renewals", label: "Renewals", icon: RefreshCw },
+  { href: "/exam-management", label: "Exam Management", icon: BookOpen },
+  { href: "/compliance-audit", label: "Compliance Audit", icon: ClipboardCheck },
+  { href: "/reports", label: "Reports", icon: BarChart3 },
 ];
 
 function SidebarLogo({ collapsed }: { collapsed: boolean }) {

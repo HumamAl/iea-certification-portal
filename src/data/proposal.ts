@@ -2,82 +2,98 @@ import type { Profile, PortfolioProject } from "@/lib/types";
 
 export const profile: Profile = {
   name: "Humam",
-  tagline: "Full-stack developer specializing in Next.js applications",
-  bio: "I build MVPs and production apps that solve real operational problems — CRM systems, fleet management platforms, AI-powered dashboards, and e-commerce tools. My approach is straightforward: understand the business need, build something that works, and ship it fast.",
+  tagline:
+    "Full-stack developer who steps into existing systems, learns their logic, and extends them without breaking what works.",
+  bio: "Legacy systems aren't problems to escape — they're environments to understand. I've worked in codebases where the original developer is long gone and the documentation is the code itself. I read the queries, trace the workflows, and move carefully.",
   approach: [
     {
-      title: "Understand the Problem",
-      description: "Read the full requirements, identify the core pain point",
-    },
-    {
-      title: "Build a Working Demo",
+      title: "Audit & Map",
       description:
-        "Show, don't tell — a live demo is worth 1000 words of proposal text",
+        "Trace the live system's logic before writing a line. Read the schema, find the business rules buried in stored procedures, and document what I find.",
     },
     {
-      title: "Use Realistic Data",
+      title: "Stabilize & Document",
       description:
-        "Mock data that looks like real client data, not placeholder text",
+        "Version control, backup procedures, and a written record of the parts I've touched — so tribal knowledge starts becoming transferable knowledge.",
     },
     {
-      title: "Ship Fast",
-      description: "MVP first, polish later. Get something deployed quickly",
+      title: "Translate Requirements",
+      description:
+        "Sit with stakeholders to bridge what the business needs and what the database allows. Specs that ignore the data model cause rewrites.",
+    },
+    {
+      title: "Build & Validate",
+      description:
+        "Implement features within the existing framework, tested against live data patterns. Working code that fits the system, not against it.",
+    },
+    {
+      title: "Handoff & Transfer",
+      description:
+        "Documentation and inline notes so the next developer doesn't need archaeology — just reading.",
     },
   ],
   skillCategories: [
     {
+      name: "Legacy Stack",
+      skills: ["PHP", "MySQL", "Linux / SSH", "Apache", "Server Administration"],
+    },
+    {
       name: "Frontend",
-      skills: [
-        "TypeScript",
-        "React",
-        "Next.js",
-        "Tailwind CSS",
-        "shadcn/ui",
-        "Recharts",
-      ],
+      skills: ["JavaScript", "HTML / CSS", "jQuery", "Responsive Design"],
     },
     {
-      name: "Backend & APIs",
-      skills: [
-        "Node.js",
-        "REST APIs",
-        "Microsoft Graph",
-        "Stripe",
-        "Shopify API",
-      ],
+      name: "Workflow & Tooling",
+      skills: ["Git", "Database Design", "SQL Query Optimization", "cPanel / WHM"],
     },
     {
-      name: "AI & Automation",
-      skills: [
-        "Claude API",
-        "OpenAI API",
-        "n8n",
-        "Prompt Engineering",
-      ],
+      name: "Modern Layer",
+      skills: ["Next.js", "TypeScript", "REST API Design", "Node.js"],
     },
   ],
 };
 
 export const portfolioProjects: PortfolioProject[] = [
   {
-    id: "wmf-agent",
-    title: "WMF Agent Dashboard",
+    id: "auction-violations",
+    title: "Auction Violations Monitor",
     description:
-      "AI-powered customer service agent for manufacturing — email classification, RFQ extraction, human-in-the-loop approval",
-    tech: ["Next.js", "Claude API", "n8n", "Microsoft Graph"],
-  },
-  {
-    id: "lead-crm",
-    title: "Lead Intake CRM",
-    description:
-      "Lead intake form, CRM dashboard, lead scoring, pipeline management, and automation rules",
+      "Compliance monitoring tool tracking violations, seller behavior, and enforcement actions across auction activity.",
     tech: ["Next.js", "TypeScript", "Tailwind", "shadcn/ui"],
+    outcome:
+      "Compliance dashboard with violation detection, seller flagging, and enforcement action tracking",
+    liveUrl: "https://auction-violations.vercel.app",
+    relevance: "Enforcement workflows, compliance record-keeping, and status-driven data — directly mirrors certification credential management.",
   },
   {
-    id: "fleet-saas",
+    id: "tinnitus-therapy",
+    title: "Tinnitus Therapy SaaS",
+    description:
+      "Multi-clinic patient management platform with treatment protocol tracking, progress dashboards, and session records.",
+    tech: ["Next.js", "TypeScript", "Tailwind", "shadcn/ui", "Recharts"],
+    outcome:
+      "Multi-clinic SaaS covering the full patient journey — intake, protocol assignment, session tracking, and outcome dashboards",
+    liveUrl: "https://tinnitus-therapy.vercel.app",
+    relevance: "Multi-location membership management, status tracking, and renewal workflows — structural parallel to a certification portal.",
+  },
+  {
+    id: "fleet-maintenance",
     title: "Fleet Maintenance SaaS",
     description:
-      "Asset tracking, work orders, preventive maintenance, inspections, parts inventory, analytics",
-    tech: ["Next.js", "Recharts", "TypeScript", "shadcn/ui"],
+      "6-module operations platform with asset tracking, work orders, compliance scheduling, parts inventory, and analytics.",
+    tech: ["Next.js", "TypeScript", "Tailwind", "shadcn/ui", "Recharts"],
+    outcome:
+      "6-module SaaS covering the full maintenance lifecycle — from asset registry to work orders to parts inventory",
+    relevance: "Complex relational data across multiple modules, compliance scheduling, and audit-trail-style history — the same data architecture challenges as a certification system.",
+  },
+  {
+    id: "payguard",
+    title: "PayGuard — Transaction Monitor",
+    description:
+      "Compliance monitoring dashboard with real-time flagging, alert management, and enforcement action tracking.",
+    tech: ["Next.js", "TypeScript", "Tailwind", "shadcn/ui", "Recharts"],
+    outcome:
+      "Compliance monitoring dashboard with transaction flagging, multi-account linking, and alert delivery tracking",
+    liveUrl: "https://payment-monitor.vercel.app",
+    relevance: "Status-driven compliance records, alert workflows, and enforcement queues — the compliance logic maps directly to credential suspension and audit triggers.",
   },
 ];
